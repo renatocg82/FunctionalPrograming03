@@ -26,7 +26,10 @@ public class App03 {
 		
 		prodList.forEach(new PriceUpdate());
 		prodList.forEach(System.out :: println);
+		System.out.println("---------------");
+		
+		prodList.forEach(Product :: staticPriceUpdate);
+		prodList.forEach(System.out :: println);
 		
 	}
-
 }

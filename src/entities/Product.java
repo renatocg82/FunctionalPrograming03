@@ -40,6 +40,15 @@ public class Product {
 		return this.getPrice() >= 100.0;
 	}
 	
+	public static void staticPriceUpdate(Product p) {
+		
+		p.setPrice(p.getPrice() * 1.1);
+		
+	}
+	
+	
+	
+	
 	@Override
 	public String toString() {
 
