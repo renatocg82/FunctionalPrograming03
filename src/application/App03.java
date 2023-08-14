@@ -3,6 +3,7 @@ package application;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.function.Consumer;
 
 import entities.Product;
 import util.PriceUpdate;
@@ -33,6 +34,11 @@ public class App03 {
 		System.out.println("---------------");
 		
 		prodList.forEach(Product :: nonStaticPriceUpdate);
+		prodList.forEach(System.out :: println);
+		System.out.println("---------------");
+		
+		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
+		prodList.forEach(cons);
 		prodList.forEach(System.out :: println);
 		
 	}
