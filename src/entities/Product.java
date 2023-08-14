@@ -46,7 +46,9 @@ public class Product {
 		
 	}
 	
-	
+	public void nonStaticPriceUpdate() {
+		this.setPrice(this.getPrice() * 1.1);
+	}
 	
 	
 	@Override
