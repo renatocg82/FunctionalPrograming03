@@ -37,12 +37,16 @@ public class App03 {
 		prodList.forEach(System.out :: println);
 		System.out.println("---------------");
 		
-		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
+		
+		double factor = 1.1;
+		Consumer<Product> cons = p -> {
+			p.setPrice(p.getPrice() * factor);
+		};
 		prodList.forEach(cons);
 		prodList.forEach(System.out :: println);
 		System.out.println("---------------");
 		
-		prodList.forEach(p -> p.setPrice(p.getPrice() * 1.1));
+		prodList.forEach(p -> p.setPrice(p.getPrice() * factor));
 		prodList.forEach(System.out :: println);
 		
 	}
